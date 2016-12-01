@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspace>
+	<settings>
+		<label>tdl</label>
+	</settings>
+	<users>
+		<user>
+			<path>tdl.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>tdl.jcp</path>
+		</project>
+	</projects>
+</workspace>
