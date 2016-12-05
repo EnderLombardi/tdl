@@ -29,9 +29,42 @@
 			<folderitem>
 				<path>src</path>
 			</folderitem>
+			<folderitem>
+				<path>src\biblio</path>
+			</folderitem>
+			<folderitem>
+				<path>src\biblio\om</path>
+			</folderitem>
+			<folderitem>
+				<path>src\biblio\iu</path>
+			</folderitem>
 			<fileitem>
 				<path>src\tdl.java</path>
 				<folder>src</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\biblio\om\Bibliotheque.java</path>
+				<folder>src\biblio\om</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\biblio\om\Document.java</path>
+				<folder>src\biblio\om</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\biblio\om\Livre.java</path>
+				<folder>src\biblio\om</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\biblio\om\Parametres.java</path>
+				<folder>src\biblio\om</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\biblio\om\Periodique.java</path>
+				<folder>src\biblio\om</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\biblio\iu\Gestionnaire.java</path>
+				<folder>src\biblio\iu</folder>
 			</fileitem>
 		</include>
 	</files>

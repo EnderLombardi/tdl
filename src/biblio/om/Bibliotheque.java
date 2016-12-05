@@ -39,7 +39,7 @@ public class Bibliotheque {
 		int inventoryNb = 0;
 		while ( found == False and i <= documents.length) {
 			if( documents[i].equals(document) ) {
-				found = True
+				found = True;
 				inventoryNb = i
 			}
 			else {

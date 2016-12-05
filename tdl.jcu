@@ -9,11 +9,61 @@
 			<label>tdl</label>
 			<showfiles>false</showfiles>
 			<folderitem>
-				<path>classes</path>
+				<path>src</path>
 			</folderitem>
 			<folderitem>
-				<path>src</path>
+				<path>src\biblio</path>
+			</folderitem>
+			<folderitem>
+				<path>src\biblio\om</path>
+			</folderitem>
+			<folderitem>
+				<path>src\biblio\iu</path>
 			</folderitem>
 		</project>
 	</projects>
+	<open_files>
+		<docitem>
+			<path>src\tdl.java</path>
+			<source>true</source>
+			<index>0</index>
+			<active>false</active>
+		</docitem>
+		<docitem>
+			<path>src\biblio\om\Bibliotheque.java</path>
+			<source>true</source>
+			<index>1</index>
+			<active>true</active>
+		</docitem>
+		<docitem>
+			<path>src\biblio\om\Document.java</path>
+			<source>true</source>
+			<index>2</index>
+			<active>false</active>
+		</docitem>
+		<docitem>
+			<path>src\biblio\om\Periodique.java</path>
+			<source>true</source>
+			<index>3</index>
+			<active>false</active>
+		</docitem>
+		<docitem>
+			<path>src\biblio\om\Livre.java</path>
+			<source>true</source>
+			<index>4</index>
+			<active>false</active>
+		</docitem>
+		<docitem>
+			<path>src\biblio\om\Parametres.java</path>
+			<source>true</source>
+			<index>5</index>
+			<active>false</active>
+		</docitem>
+		<docitem>
+			<path>src\biblio\iu\Gestionnaire.java</path>
+			<source>true</source>
+			<index>6</index>
+			<active>false</active>
+		</docitem>
+	</open_files>
 </workspace_user>
