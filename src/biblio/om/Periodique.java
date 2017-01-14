@@ -18,6 +18,7 @@ public class Periodique extends Document {
 	public String toString() {
 		String phrase_descriptive;
 		phrase_descriptive = "Titre : " + this._titre + " ; Pages : " + this._pages + " ; Fréquence : " + this._frequence;
+		return(phrase_descriptive);
 	}
 	
 	public Object clone() {

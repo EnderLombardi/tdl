@@ -36,6 +36,7 @@ public class Document {
 	public String toString() {
 		String phrase_descriptive;
 		phrase_descriptive = "Titre : " + this._titre + " ; Pages : " + this._pages + " ; numInv : " + Integer.toString(this._numInv); // convertir date en string
+		return(phrase_descriptive);
 	}
 	
 	
