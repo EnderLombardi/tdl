@@ -5,6 +5,7 @@ public class Periodique extends Document {
 	private String _frequence;
 	
 	public Periodique (String titre, int pages, String frequence)
+		super(titre,pages);
 		this._frequence = frequence
 		
 	public String getFrequence() {
