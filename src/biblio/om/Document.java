@@ -1,4 +1,5 @@
 package biblio.om;
+import java.util.Date;
 
 
 public class Document {
@@ -6,11 +7,12 @@ public class Document {
 	private int _numInv = 0;
 	protected  String _titre;
 	protected int _pages;
-//	private Date _creationDate;
+	protected Date _creationDate;
 	
 	public Document(String titre, int pages) {
 		this._titre = titre;
 		this._pages = pages;
+		this._creationDate = new Date();
 	}
 	
 	public int getPages() {

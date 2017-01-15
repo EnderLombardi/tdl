@@ -5,11 +5,12 @@ public class Bibliotheque {
 	
 	private String _nom = "";
 	private int _nDocuments = 0;
-	private Document[] documents = {}; // peut-être qu'il faut écrire Document documents[] à la place; à voir au moment de la compilation
+	//private Document[] documents = {}; // peut-être qu'il faut écrire Document documents[] à la place; à voir au moment de la compilation
+	//Document documents[] = {};
+	Document documents[] = new Document[6];
 	
 	
 	public Bibliotheque(String nom) {
-		System.out.println(nom);
 		this._nom = nom;
 	}
 	

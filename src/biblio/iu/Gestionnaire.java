@@ -1,11 +1,15 @@
 package biblio.iu;
 import java.util.Vector;
 import biblio.om.Bibliotheque;
+import biblio.om.Document;
+import biblio.om.Livre;
 
 public class Gestionnaire {
 	
 	private Vector tampon;
 	private Bibliotheque _biblio;
+	private static int numberOfDocuments = 0;
+	private static Document documents[] = new Document[6];
 	/**
 	 * Method Gestionnaire
 	 *
@@ -17,11 +21,11 @@ public class Gestionnaire {
 	
 	public static void main(String[] args) {
 		Gestionnaire gest = new Gestionnaire();
-		System.out.println("\n==== SCENARIO 100 ====\n");
-	    Vector tampon = new Vector();
-	    Bibliotheque _biblio = new Bibliotheque("A7");
 		gest.scenario1();
-		//System.out.println("\n==== SCENARIO 2 ====\n");
+
+		
+		
+		
 		//gest.scenario2();
 		
 		
@@ -31,10 +35,22 @@ public class Gestionnaire {
 	
 	
 	private void scenario1() {
-		
+		System.out.println("\n==== SCENARIO 1 ====\n");
+		// Gestionnaire.numberOfDocuments = _biblio.getNumberOfDocuments();
+	    //System.out.println(Integer.toString(numberOfDocuments));
+	    Vector tampon = new Vector();
+	    Bibliotheque _biblio = new Bibliotheque("A7");
+	   
+	   
+	    _biblio.addDocument(new Livre("Java 1.5 ",786,"Laura Lemay","SM"));
+	  
+	  
+	    Gestionnaire.documents = _biblio.getDocuments();
+	    System.out.println(Gestionnaire.documents[0].toString());
 	}
 	
 	private void scenario2() {
+		//System.out.println("\n==== SCENARIO 2 ====\n");
 		
 	}
 	
