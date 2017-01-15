@@ -9,6 +9,7 @@ public class Bibliotheque {
 	
 	
 	public Bibliotheque(String nom) {
+		System.out.println(nom);
 		this._nom = nom;
 	}
 	
@@ -25,11 +26,11 @@ public class Bibliotheque {
 	}
 	
 	public Document[] getDocuments() {
-		return(documents)
+		return(documents);
 	}
 	
 	public void addDocument(Document document) {
-		documents[_nDocuments] = documents;
+		documents[_nDocuments] = document;
 	_nDocuments ++;		
 	}
 	
@@ -37,21 +38,21 @@ public class Bibliotheque {
 		boolean found = false;
 		int i = 0;
 		int inventoryNb = 0;
-		while ( found == False and i <= documents.length) {
+		while ( found == false && i <= documents.length)  {
 			if( documents[i].equals(document) ) {
-				found = True;
+				found = true;
 				inventoryNb = i;
 			}
 			else {
-				continue
+				continue;
 			}
 			i++;
 		}
 		if (found == true) {
-			return(inventoryNb)
+			return(inventoryNb);
 		}
 		else{
-			return(-1) // insérer une exception
+			return(-1); // insérer une exception
 		}
 	}
 	

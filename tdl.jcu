@@ -24,16 +24,16 @@
 	</projects>
 	<open_files>
 		<docitem>
-			<path>src\tdl.java</path>
+			<path>src\biblio\iu\Gestionnaire.java</path>
 			<source>true</source>
 			<index>0</index>
-			<active>false</active>
+			<active>true</active>
 		</docitem>
 		<docitem>
 			<path>src\biblio\om\Bibliotheque.java</path>
 			<source>true</source>
 			<index>1</index>
-			<active>true</active>
+			<active>false</active>
 		</docitem>
 		<docitem>
 			<path>src\biblio\om\Document.java</path>
@@ -47,23 +47,63 @@
 			<index>3</index>
 			<active>false</active>
 		</docitem>
-		<docitem>
-			<path>src\biblio\om\Livre.java</path>
-			<source>true</source>
-			<index>4</index>
-			<active>false</active>
-		</docitem>
-		<docitem>
-			<path>src\biblio\om\Parametres.java</path>
-			<source>true</source>
-			<index>5</index>
-			<active>false</active>
-		</docitem>
-		<docitem>
-			<path>src\biblio\iu\Gestionnaire.java</path>
-			<source>true</source>
-			<index>6</index>
-			<active>false</active>
-		</docitem>
 	</open_files>
+	<symboltables>
+		<symboltable>
+			<path>..\..\retest\retestproject\src\retestproject.java.sdk</path>
+			<symbols>
+				<symbol>retestproject</symbol>
+			</symbols>
+		</symboltable>
+		<symboltable>
+			<path>..\..\retest\retestproject\src\Gestionnairet.java.sdk</path>
+			<symbols>
+				<symbol>Gestionnairet</symbol>
+			</symbols>
+		</symboltable>
+		<symboltable>
+			<path>src\biblio\om\Document.java.sdk</path>
+			<symbols>
+				<symbol>Document</symbol>
+			</symbols>
+		</symboltable>
+		<symboltable>
+			<path>src\biblio\om\Periodique.java.sdk</path>
+			<symbols>
+				<symbol>Document</symbol>
+				<symbol>Periodique</symbol>
+			</symbols>
+		</symboltable>
+		<symboltable>
+			<path>src\biblio\om\Bibliotheque.java.sdk</path>
+			<symbols>
+				<symbol>Bibliotheque</symbol>
+				<symbol>Document</symbol>
+			</symbols>
+		</symboltable>
+		<symboltable>
+			<path>..\..\test\src\test.java.sdk</path>
+			<symbols>
+				<symbol>test</symbol>
+			</symbols>
+		</symboltable>
+		<symboltable>
+			<path>..\..\test\Gestionnaire.java.sdk</path>
+			<symbols>
+				<symbol>Gestionnaire</symbol>
+			</symbols>
+		</symboltable>
+		<symboltable>
+			<path>src\bon.java.sdk</path>
+			<symbols>
+				<symbol>bon</symbol>
+			</symbols>
+		</symboltable>
+		<symboltable>
+			<path>src\biblio\iu\Gestionnaire.java.sdk</path>
+			<symbols>
+				<symbol>Gestionnaire</symbol>
+			</symbols>
+		</symboltable>
+	</symboltables>
 </workspace_user>

@@ -19,7 +19,7 @@
 			<applet_ref/>
 			<debugger_ref/>
 			<param/>
-			<run/>
+			<run>biblio.iu.Gestionnaire</run>
 			<verify>true</verify>
 		</runtime>
 	</runtimes>
@@ -38,10 +38,6 @@
 			<folderitem>
 				<path>src\biblio\iu</path>
 			</folderitem>
-			<fileitem>
-				<path>src\tdl.java</path>
-				<folder>src</folder>
-			</fileitem>
 			<fileitem>
 				<path>src\biblio\om\Bibliotheque.java</path>
 				<folder>src\biblio\om</folder>
@@ -68,5 +64,18 @@
 			</fileitem>
 		</include>
 	</files>
-	<tasks/>
+	<tasks>
+		<todotaskitem>
+			<description>TODO: Add your code here</description>
+			<filepath>src\biblio\iu\Gestionnaire.java</filepath>
+			<line>14</line>
+			<timestamp>1484421543</timestamp>
+		</todotaskitem>
+		<todotaskitem>
+			<description>TODO, add your application code</description>
+			<filepath>src\biblio\iu\Gestionnaire.java</filepath>
+			<line>34</line>
+			<timestamp>1484421543</timestamp>
+		</todotaskitem>
+	</tasks>
 </project>

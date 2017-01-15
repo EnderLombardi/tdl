@@ -4,9 +4,9 @@ package biblio.om;
 public class Document {
 	private static int docTotal = 0;
 	private int _numInv = 0;
-	private String _titre;
-	private int _pages;
-	private Date _creationDate;
+	protected  String _titre;
+	protected int _pages;
+//	private Date _creationDate;
 	
 	public Document(String titre, int pages) {
 		this._titre = titre;
@@ -14,19 +14,20 @@ public class Document {
 	}
 	
 	public int getPages() {
-		return(this._pages)
+		return(this._pages);
 	}
 	
 	public void setPages(int pages) {
 		this._pages = pages;
 	}
 	
-	public Date getDate() {
-		return(this._creationDate)
+/*	public Date getDate() {
+		return(this._creationDate);
 	}
+	*/
 	
 	public String getTitre() {
-		return(this._titre)
+		return(this._titre);
 	}
 	
 	public void setTitre(String titre) {
@@ -41,7 +42,7 @@ public class Document {
 	
 	
 	public static int getNumberOfDocumentCreated() {
-		return(Document.docTotal)
+		return(Document.docTotal);
 	}
 	
 	
