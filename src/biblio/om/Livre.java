@@ -1,14 +1,15 @@
 package biblio.om;
 
 
-public class Livre {
+public class Livre extends Document {
 	
 	private String _auteur = "";
 	private String _editeur = "";
 	private int _numExemplaire = 0;
 	
 	
-	public Livre(String auteur, String editeur) {
+	public Livre(String titre, int pages,String auteur, String editeur) {
+		super(titre, pages);
 		this._auteur = auteur;
 		this._editeur = editeur;
 	}
