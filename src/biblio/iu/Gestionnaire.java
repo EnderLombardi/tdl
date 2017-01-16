@@ -1,6 +1,7 @@
 package biblio.iu;
 import java.util.Vector;
 import java.util.Collections;
+import java.util.Scanner; 
 
 import biblio.om.Bibliotheque;
 import biblio.om.Document;
@@ -68,6 +69,72 @@ public class Gestionnaire {
 	    this.tampon.addElement(p4);
 	    this.tampon.addElement(p5);
 	    this.tampon.addElement(p6);
+	    
+	    boolean flag = true;
+	    Scanner sc = new Scanner(System.in);
+	    String rep1;
+	    int rep2;
+	    String titre,auteur,editeur,frequence;
+	    int pages;
+	    while(flag) {
+	    
+		System.out.println("Voulez vous ajouter un document à la Bibliothèque? (o/n) :");
+		rep1 = sc.nextLine();
+		if (rep1.toLowerCase().equals("o"))
+			{
+				System.out.println("Veuillez rentrer le chiffre correspondant à votre requête : \n 1 - Ajout d'un Livre \n 2 - Ajout d'un Périodique ");
+				rep2 = sc.nextInt();
+				sc.nextLine(); // pour récupérer l'appui sur la touche entrée au moment de valider le choix précédent
+				if (rep2 == 1)
+					{
+						System.out.println("Quel est le titre du livre?\n");
+						titre = sc.nextLine();
+						System.out.println("Quel est l'auteur du livre?\n");
+						auteur = sc.nextLine();
+						System.out.println("Combien de pages comporte-t-il?\n");
+						pages = sc.nextInt();
+						sc.nextLine();
+						System.out.println("Quel est l'éditeur du livre?\n");
+						editeur = sc.nextLine();
+						
+						Livre new_livre = new Livre(titre,pages,auteur,editeur);
+						this.tampon.addElement(new_livre);	
+					}
+					
+				else if (rep2 ==2)
+					{
+						System.out.println("Quel est le titre du périodique?\n");
+						titre = sc.nextLine();
+						System.out.println("Combien de pages comporte-t-il?\n");
+						pages = sc.nextInt();
+						sc.nextLine();
+						System.out.println("A quelle fréquence paraît le périodique? hebdomadaire, bimensuel ou mensuel?");
+						frequence = sc.nextLine();
+						
+						Periodique new_periodique = new Periodique(titre,pages,frequence);
+						this.tampon.addElement(new_periodique);	
+					}
+				
+				else
+					{
+						System.out.println("Nous n'avons pas compris votre choix. Retour à la question initiale");
+					}
+			}	
+		else if (rep1.toLowerCase().equals("n"))
+			{
+				System.out.println("Aucun document à ajouter");
+				flag = false;
+			}
+		else
+			{
+				System.out.println("Nous n'avons pas compris votre choix, veuillez recommencer");
+			}
+		
+		
+		
+		
+	    }
+	    	
 	    
 	    System.out.println("nombre de documents crées : " + Integer.toString(this.tampon.size()) + "\n");
 	    
