@@ -1,5 +1,7 @@
 package biblio.iu;
 import java.util.Vector;
+import java.util.Collections;
+
 import biblio.om.Bibliotheque;
 import biblio.om.Document;
 import biblio.om.Livre;
@@ -11,7 +13,7 @@ public class Gestionnaire {
 	private Vector tampon;
 	private Bibliotheque _biblio;
 	private static int numberOfDocuments = 0;
-	private static Document documents[] = new Document[6];
+	private static Document documents[] = new Document[Parametres._biblioCapacity];
 	/**
 	 * Method Gestionnaire
 	 *
@@ -78,18 +80,40 @@ public class Gestionnaire {
 	}
 	
 	private void scenario2() {
-			System.out.println(this.tampon.elementAt(2)+ "\n");
-		 /* _biblio.addDocument(new Livre("Java 1.5 ",786,"Laura Lemay","SM"));
-	    _biblio.addDocument(new Livre("Les Particule Elémentaires",388,"Michel Houellebecq","Flammarion"));
-	    _biblio.addDocument(new Livre("L'alchimiste",189,"Paulo Coelho","Poche")); */
+			System.out.println("\n\n\n==== SCENARIO 2 ====\n");
+			this._biblio = new Bibliotheque("Bibliothèque Locale");
+			
+			System.out.println("---> nom : " + this._biblio.getNom());
+			
+			
+			
+		
+			System.out.println("---> ajout des documents à la bibliotheque dans l'ordre inverse de Vector");
+			
+			Collections.reverse(this.tampon); 	// On renverse le Vector
+			for(int i = 0; i <= this.tampon.size()-1; i++)
+		{
+  			this._biblio.addDocument((Document)this.tampon.elementAt(i));
+		}
+		
+			System.out.println("---> liberation du vector");
+			this.tampon.removeAllElements();
+			
+			System.out.println("==== Affichage du contenu de la Bibliotheque ====\n");
+			
+	
 	    
-	   
-	  
-	  
-	   // Gestionnaire.documents = _biblio.getDocuments();
+	   	   Gestionnaire.documents = this._biblio.getDocuments();
+	   	   
+	   	   	for(int i =1; i <= Gestionnaire.documents.length -1; i++)
+		{
+			//System.out.println("---> Inventaire n°" + Integer.toString(Gestionnaire.documents[i]._numInv);
+			System.out.println("---> Inventaire n°" + Integer.toString(Parametres._startIndexForInventory + this._biblio.getInventoryNb(Gestionnaire.documents[i])));
+  			System.out.println(Gestionnaire.documents[i].toString2() + "\n");
+		}
 	   // System.out.println(Gestionnaire.documents[0].toString());
 		//System.out.println("\n==== SCENARIO 2 ====\n");
-		 //Bibliotheque _biblio = new Bibliotheque("A7");
+		 //
 		
 	}
 	

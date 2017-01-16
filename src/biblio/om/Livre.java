@@ -36,6 +36,23 @@ public class Livre extends Document {
 		phrase_descriptive = this._creationDate.toString() + " ---> biblio.om.Livre: Titre =  " + this._titre + " - Pages =  " + Integer.toString(this._pages) + " - Auteur = " + this._auteur + " - Editeur = " + this._editeur + " - Numero d exemplaire = " + this._numExemplaire;
 		return(phrase_descriptive);
 	}
+	
+	public String toString2() {
+		String phrase_descriptive;
+		phrase_descriptive = "* biblio.om.Livre: Titre =  " + this._titre + " - Pages =  " + Integer.toString(this._pages) + " - Auteur = " + this._auteur + " - Editeur = " + this._editeur + " - Numero d exemplaire = " + this._numExemplaire;
+		return(phrase_descriptive);
+	}
+	
+	 public boolean equals(Livre l1) {
+		if (this._titre == l1._titre && this._numExemplaire == l1._numExemplaire)
+		{
+			return(true);
+		}
+		else
+		{
+			return(false);
+		}
+	}
 		
 }
 	

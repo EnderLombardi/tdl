@@ -24,9 +24,26 @@ public class Periodique extends Document {
 		return(phrase_descriptive);
 	}
 	
+	public String toString2() {
+			String phrase_descriptive;
+			phrase_descriptive = "* biblio.om.Periodique: Titre =  " + this._titre + " - Pages =  " + Integer.toString(this._pages) + " - Fréquence : " + this._frequence;
+			return(phrase_descriptive);
+	}
+	
 	/* public Object clone() {
 		
 	} */
+	
+	public boolean equals(Periodique l1) {
+		if (this._titre == l1._titre)
+		{
+			return(true);
+		}
+		else
+		{
+			return(false);
+		}
+	}
 
 }
   

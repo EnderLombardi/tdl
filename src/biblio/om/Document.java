@@ -1,10 +1,11 @@
 package biblio.om;
 import java.util.Date;
+import biblio.om.Parametres;
 
 
-public class Document {
+public  class Document {
 	private static int docTotal = 0;
-	private int _numInv = 0;
+	public int _numInv = 0;
 	protected  String _titre;
 	protected int _pages;
 	protected Date _creationDate;
@@ -13,6 +14,8 @@ public class Document {
 		this._titre = titre;
 		this._pages = pages;
 		this._creationDate = new Date();
+		//Document.docTotal ++;
+		//this._numInv = Parametres._startIndexForInventory + Document.docTotal;
 	}
 	
 	public int getPages() {
@@ -42,17 +45,24 @@ public class Document {
 		return(phrase_descriptive);
 	}
 	
+	public String toString2(){
+		return("");
+	}
+	
 	
 	public static int getNumberOfDocumentCreated() {
 		return(Document.docTotal);
 	}
 	
+	public void setNumberOfInventory(int invNumber) {
+		this._numInv = invNumber;
+	}
 	
 	
 	
-	
-	
-	
+	public  boolean equals(){
+		return(false);
+	}
 	
 	
 	

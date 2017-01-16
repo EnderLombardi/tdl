@@ -7,7 +7,7 @@ public class Bibliotheque {
 	private int _nDocuments = 0;
 	//private Document[] documents = {}; // peut-être qu'il faut écrire Document documents[] à la place; à voir au moment de la compilation
 	//Document documents[] = {};
-	Document documents[] = new Document[6];
+	Document documents[] = new Document[Parametres._biblioCapacity];
 	
 	
 	public Bibliotheque(String nom) {
@@ -39,13 +39,10 @@ public class Bibliotheque {
 		boolean found = false;
 		int i = 0;
 		int inventoryNb = 0;
-		while ( found == false && i <= documents.length)  {
-			if( documents[i].equals(document) ) {
+		while ( found == false && i <= documents.length-1)  {
+			if( this.documents[i].equals(document) ) {
 				found = true;
 				inventoryNb = i;
-			}
-			else {
-				continue;
 			}
 			i++;
 		}
