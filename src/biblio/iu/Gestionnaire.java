@@ -42,11 +42,18 @@ public class Gestionnaire {
 	    Bibliotheque _biblio = new Bibliotheque("A7");
 	   
 	   
-	    _biblio.addDocument(new Livre("Java 1.5 ",786,"Laura Lemay","SM"));
+	   /* _biblio.addDocument(new Livre("Java 1.5 ",786,"Laura Lemay","SM"));
+	    _biblio.addDocument(new Livre("Les Particule Elémentaires",388,"Michel Houellebecq","Flammarion"));
+	    _biblio.addDocument(new Livre("L'alchimiste",189,"Paulo Coelho","Poche")); */
+	    
+	    Livre testo;
+	    testo = new Livre("Java 1.5 ",786,"Laurali Lemay","SM");
+	     System.out.println(testo);
+
 	  
 	  
-	    Gestionnaire.documents = _biblio.getDocuments();
-	    System.out.println(Gestionnaire.documents[0].toString());
+	   // Gestionnaire.documents = _biblio.getDocuments();
+	   // System.out.println(Gestionnaire.documents[0].toString());
 	}
 	
 	private void scenario2() {

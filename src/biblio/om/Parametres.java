@@ -1,17 +1,14 @@
-/* package biblio.om;
+package biblio.om;
 
 
-public enum Parametres {
+public class Parametres {
 
-	private int _biblioCapacity = 50;
-	private int _numberOfMSDNIssue = 5;
-	private int _startIndexForInventory = 1000;
+	public static int  _biblioCapacity = 50;
+	public static int _numberOfMSDNIssue = 5;
+	public static int _startIndexForInventory = 1000;
 		
-	Mensuel("MENSUEL"),
-	Bimensuel("BIMENSUEL"),
-	Hebdomadaire("HEBDOMADAIRE");
-	
+	public static String mensuel="MENSUEL" ;
+	public static String bimensuel="BIMENSUEL" ;
+	public static String hebdomadaire="HEBDOMADAIRE";
 
 }
-
-	*/
