@@ -3,6 +3,7 @@ import java.util.Vector; // structure de donnée
 import java.util.Collections; // nous servira pour renverser le vector
 import java.util.Scanner;  // nous servira à récupérer les inputs
 import biblio.om.*; // On importe l'intégralité du package biblio.om
+ import java.util.InputMismatchException;
 
 
 public class Gestionnaire {
@@ -85,7 +86,10 @@ public class Gestionnaire {
 	     */
 	    
 	    
+	    
 	    while(flag) {
+	    try
+	    {
 	    flag2 = true; // on réinitialise ces booléens au début de la grande boucle, pour s'assurer de rentrer dans les sous boucles quand on renvoie l'user au début.
 		flag3 = true;
 		System.out.println("Voulez vous ajouter un document à la Bibliothèque? (o/n) :");
@@ -182,11 +186,17 @@ public class Gestionnaire {
 			{
 					System.out.println("Nous n'avons pas compris votre réponse, veuillez saisir seulement \"o\" ou \"n\" et arrêter de vouloir faire planter le programme :)" );
 			}
+			
 		
 		
-		
+		} catch (InputMismatchException e) {
+			System.out.println("Vous avez saisi un entier alors qu'il fallait saisir une chaîne de caractère, ou l'inverse ! Pas de panique, on vous ramène à la question initiale !");
+			sc.nextLine();
+			}
 		
 	    }
+	    
+	    
 	    	
 	    
 	    System.out.println("nombre de documents crées : " + Integer.toString(this.tampon.size()) + "\n");
@@ -203,11 +213,7 @@ public class Gestionnaire {
 			System.out.println("\n\n\n==== SCENARIO 2 ====\n");
 			this._biblio = new Bibliotheque("Bibliothèque Locale");
 			
-			System.out.println("---> nom : " + this._biblio.getNom());
-			
-			
-			
-		
+			System.out.println("---> nom : " + this._biblio.getNom());	
 			System.out.println("---> ajout des documents à la bibliotheque dans l'ordre inverse de Vector");
 			
 			Collections.reverse(this.tampon); 	// On renverse le Vector
