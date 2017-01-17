@@ -3,7 +3,7 @@ import java.util.Date;
 import biblio.om.Parametres;
 
 
-public  class Document {
+public  class Document implements Cloneable {
 	private static int docTotal = 0;
 	public int _numInv = 0;
 	protected  String _titre;
@@ -62,6 +62,11 @@ public  class Document {
 	
 	public  boolean equals(){
 		return(false);
+	}
+	
+	public 	Document clone(){ // sera surchargé par les classes filles
+		Document doc_clone = new Document(this._titre,this._pages);
+		return (doc_clone);
 	}
 	
 	

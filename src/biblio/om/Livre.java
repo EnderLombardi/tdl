@@ -53,6 +53,12 @@ public class Livre extends Document {
 			return(false);
 		}
 	}
+	
+		public Livre clone(){
+		Livre livre_clone = new Livre(this._titre,this._pages,this._auteur,this._editeur);
+		livre_clone._numExemplaire = this._numExemplaire + 1 ;
+		return (livre_clone);
+	}
 		
 }
 	

@@ -42,14 +42,18 @@ public class Gestionnaire {
 		// Gestionnaire.numberOfDocuments = _biblio.getNumberOfDocuments();
 	    //System.out.println(Integer.toString(numberOfDocuments));
 	    this.tampon = new Vector();
-	    Livre l1,l2,l3;
+	    Livre l1,l2,l3,l4,l5;
 	    Periodique p1,p2,p3,p4,p5,p6;
 	    
 	    l1 =  new Livre("Java 1.5 ",786,"Laura Lemay","SM");
 	    l2 = new Livre("Les Particule Elémentaires",388,"Michel Houellebecq","Flammarion");
 	    l3 = new Livre("L'alchimiste",189,"Paulo Coelho","Poche");
+	    l4 = l1.clone();
+	    l5 = l4.clone();
 	    
 	    this.tampon.addElement(l1);
+	    this.tampon.addElement(l4);
+	    this.tampon.addElement(l5);
 	    this.tampon.addElement(l2);
 	    this.tampon.addElement(l3);
 	    
