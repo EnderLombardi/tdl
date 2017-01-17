@@ -1,13 +1,9 @@
 package biblio.iu;
-import java.util.Vector;
-import java.util.Collections;
-import java.util.Scanner; 
+import java.util.Vector; // structure de donnée
+import java.util.Collections; // nous servira pour renverser le vector
+import java.util.Scanner;  // nous servira à récupérer les inputs
+import biblio.om.*; // On importe l'intégralité du package biblio.om
 
-import biblio.om.Bibliotheque;
-import biblio.om.Document;
-import biblio.om.Livre;
-import biblio.om.Periodique;
-import biblio.om.Parametres;
 
 public class Gestionnaire {
 	
