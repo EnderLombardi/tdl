@@ -1,5 +1,6 @@
 package biblio.om;
-import biblio.om.Document;
+//import biblio.om.Document;
+
 
 
 public class Periodique extends Document {
@@ -44,6 +45,7 @@ public class Periodique extends Document {
 			return(false);
 		}
 	}
+	
 
 }
   

@@ -1,6 +1,5 @@
 package biblio.om;
 import java.util.Date;
-import biblio.om.Parametres;
 
 
 public  class Document implements Cloneable {
