@@ -71,13 +71,17 @@ public class Gestionnaire {
 	    this.tampon.addElement(p6);
 	    
 	    boolean flag = true;
+	    boolean flag2= true;
+	    boolean flag3 = true;
 	    Scanner sc = new Scanner(System.in);
 	    String rep1;
 	    int rep2;
+	    String rep3;
 	    String titre,auteur,editeur,frequence;
 	    int pages;
 	    while(flag) {
-	    
+	    flag2 = true; // on réinitialise les booléens au début de la grande boucle, pour s'assurer de rentrer dans les sous boucles quand on renvoie l'user au début.
+		flag3 = true;
 		System.out.println("Voulez vous ajouter un document à la Bibliothèque? (o/n) :");
 		rep1 = sc.nextLine();
 		if (rep1.toLowerCase().equals("o"))
@@ -97,8 +101,28 @@ public class Gestionnaire {
 						System.out.println("Quel est l'éditeur du livre?\n");
 						editeur = sc.nextLine();
 						
-						Livre new_livre = new Livre(titre,pages,auteur,editeur);
-						this.tampon.addElement(new_livre);	
+						System.out.println("Vous êtes sur le point d'ajouter le document suivant : \n Titre =  " + titre + " - Pages =  " + Integer.toString(pages) + " - Auteur = " + auteur + " - Editeur = " + editeur +"\n Confirmez-vous la saisie? (o/n)");
+						rep3 = sc.nextLine();
+						while (flag2)
+						{
+						
+						if (rep3.toLowerCase().equals("o"))
+							{
+								Livre new_livre = new Livre(titre,pages,auteur,editeur);
+								this.tampon.addElement(new_livre);
+								System.out.println("Le livre a bien été rentré à la liste des documents à ajouter.");
+								flag2 = false;
+							}
+						else if (rep3.toLowerCase().equals("n"))
+							{
+								System.out.println("Fort bien, nous vous renvoyons à la question initiale");
+								flag2 = false;
+							}
+						else
+							{
+								System.out.println("Nous n'avons pas compris votre réponse, veuillez saisir seulement \"o\" ou \"n\" et arrêter de vouloir faire planter le programme :)" );
+							}
+						}	
 					}
 					
 				else if (rep2 ==2)
@@ -111,8 +135,31 @@ public class Gestionnaire {
 						System.out.println("A quelle fréquence paraît le périodique? hebdomadaire, bimensuel ou mensuel?");
 						frequence = sc.nextLine();
 						
-						Periodique new_periodique = new Periodique(titre,pages,frequence);
-						this.tampon.addElement(new_periodique);	
+						System.out.println("Vous êtes sur le point d'ajouter le document suivant : \n Titre =  " + titre + " - Pages =  "
+											 + Integer.toString(pages) + " - Fréquence : " + frequence + "\n Confirmez vous la saisie? (o/n)");
+						
+						rep3 = sc.nextLine();
+						while (flag3)
+						{
+						
+						if (rep3.toLowerCase().equals("o"))
+							{
+								Periodique new_periodique = new Periodique(titre,pages,frequence);
+								this.tampon.addElement(new_periodique);	
+								System.out.println("Le périodique a bien été rentré à la liste des documents à ajouter.");
+								flag3 = false;
+							}
+						else if (rep3.toLowerCase().equals("n"))
+							{
+								System.out.println("Fort bien, nous vous renvoyons à la question initiale");
+								flag3 = false;
+							}
+						else
+							{
+								System.out.println("Nous n'avons pas compris votre réponse, veuillez saisir seulement \"o\" ou \"n\" et arrêter de vouloir faire planter le programme :)" );
+							}
+						}						 
+						
 					}
 				
 				else
@@ -127,7 +174,7 @@ public class Gestionnaire {
 			}
 		else
 			{
-				System.out.println("Nous n'avons pas compris votre choix, veuillez recommencer");
+					System.out.println("Nous n'avons pas compris votre réponse, veuillez saisir seulement \"o\" ou \"n\" et arrêter de vouloir faire planter le programme :)" );
 			}
 		
 		
@@ -170,18 +217,18 @@ public class Gestionnaire {
 			
 	
 	    
-	   	   Gestionnaire.documents = this._biblio.getDocuments();
-	   	   
-	   	   	for(int i =1; i <= Gestionnaire.documents.length -1; i++)
-		{
-			//System.out.println("---> Inventaire n°" + Integer.toString(Gestionnaire.documents[i]._numInv);
-			System.out.println("---> Inventaire n°" + Integer.toString(Parametres._startIndexForInventory + this._biblio.getInventoryNb(Gestionnaire.documents[i])));
-  			System.out.println(Gestionnaire.documents[i].toString2() + "\n");
-		}
-	   // System.out.println(Gestionnaire.documents[0].toString());
-		//System.out.println("\n==== SCENARIO 2 ====\n");
-		 //
+	   	   Gestionnaire.documents = this._biblio.getDocuments();  
+	   	   	for(int i =0; i < Gestionnaire.documents.length -2; i++)
+		{	
+			if (Gestionnaire.documents[i] != null)
+			{
+					System.out.println("---> Inventaire n°" + Integer.toString(Parametres._startIndexForInventory + 1 + this._biblio.getInventoryNb(Gestionnaire.documents[i])));
+  					System.out.println(Gestionnaire.documents[i].toString2() + "\n");
+			}
+			
 		
+		}
+	  
 	}
 	
 }

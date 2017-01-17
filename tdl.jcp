@@ -68,14 +68,8 @@
 		<todotaskitem>
 			<description>TODO: Add your code here</description>
 			<filepath>src\biblio\iu\Gestionnaire.java</filepath>
-			<line>14</line>
-			<timestamp>1484421543</timestamp>
-		</todotaskitem>
-		<todotaskitem>
-			<description>TODO, add your application code</description>
-			<filepath>src\biblio\iu\Gestionnaire.java</filepath>
-			<line>34</line>
-			<timestamp>1484421543</timestamp>
+			<line>24</line>
+			<timestamp>1484604554</timestamp>
 		</todotaskitem>
 	</tasks>
 </project>

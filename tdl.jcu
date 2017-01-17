@@ -27,7 +27,7 @@
 			<path>src\biblio\iu\Gestionnaire.java</path>
 			<source>true</source>
 			<index>0</index>
-			<active>true</active>
+			<active>false</active>
 		</docitem>
 		<docitem>
 			<path>src\biblio\om\Bibliotheque.java</path>
@@ -62,23 +62,10 @@
 			</symbols>
 		</symboltable>
 		<symboltable>
-			<path>src\biblio\om\Document.java.sdk</path>
-			<symbols>
-				<symbol>Document</symbol>
-			</symbols>
-		</symboltable>
-		<symboltable>
 			<path>src\biblio\om\Periodique.java.sdk</path>
 			<symbols>
 				<symbol>Document</symbol>
 				<symbol>Periodique</symbol>
-			</symbols>
-		</symboltable>
-		<symboltable>
-			<path>src\biblio\om\Bibliotheque.java.sdk</path>
-			<symbols>
-				<symbol>Bibliotheque</symbol>
-				<symbol>Document</symbol>
 			</symbols>
 		</symboltable>
 		<symboltable>
@@ -100,9 +87,28 @@
 			</symbols>
 		</symboltable>
 		<symboltable>
+			<path>src\biblio\om\Document.java.sdk</path>
+			<symbols>
+				<symbol>Document</symbol>
+			</symbols>
+		</symboltable>
+		<symboltable>
+			<path>src\biblio\om\Bibliotheque.java.sdk</path>
+			<symbols>
+				<symbol>Bibliotheque</symbol>
+				<symbol>Document</symbol>
+				<symbol>Parametres</symbol>
+			</symbols>
+		</symboltable>
+		<symboltable>
 			<path>src\biblio\iu\Gestionnaire.java.sdk</path>
 			<symbols>
+				<symbol>Bibliotheque</symbol>
+				<symbol>Document</symbol>
 				<symbol>Gestionnaire</symbol>
+				<symbol>Livre</symbol>
+				<symbol>Parametres</symbol>
+				<symbol>Periodique</symbol>
 			</symbols>
 		</symboltable>
 	</symboltables>
