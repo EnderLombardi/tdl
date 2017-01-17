@@ -70,17 +70,27 @@ public class Gestionnaire {
 	    this.tampon.addElement(p5);
 	    this.tampon.addElement(p6);
 	    
-	    boolean flag = true;
-	    boolean flag2= true;
-	    boolean flag3 = true;
+	    boolean flag = true,flag2 = true, flag3 = true;
 	    Scanner sc = new Scanner(System.in);
-	    String rep1;
-	    int rep2;
-	    String rep3;
+	    String rep1,rep3;
+	    int rep2,pages;
 	    String titre,auteur,editeur,frequence;
-	    int pages;
+	    
+	    /*   ======= INTERFACE CONSOLE ======= 
+	     
+	     		1) On demande à l'utilisateur s'il veut ajouter un document à la bibliothèque.
+	     		2) On demande s'il s'agit d'un livre ou d'un périodique.
+	     		3) En fonction, on lui demande de renseigner les attributs adéquats.
+	     		4) On demande confirmation avant de créer l'objet et de l'ajouter dans le vector tampon, qui est la liste des documents à ajouter.
+	     
+	     les variables flagX permettent de contrôler les boucles.
+	     les variables repX permettent d'enregistrer les choix de l'utilisateurs.
+	     
+	     */
+	    
+	    
 	    while(flag) {
-	    flag2 = true; // on réinitialise les booléens au début de la grande boucle, pour s'assurer de rentrer dans les sous boucles quand on renvoie l'user au début.
+	    flag2 = true; // on réinitialise ces booléens au début de la grande boucle, pour s'assurer de rentrer dans les sous boucles quand on renvoie l'user au début.
 		flag3 = true;
 		System.out.println("Voulez vous ajouter un document à la Bibliothèque? (o/n) :");
 		rep1 = sc.nextLine();
@@ -88,8 +98,8 @@ public class Gestionnaire {
 			{
 				System.out.println("Veuillez rentrer le chiffre correspondant à votre requête : \n 1 - Ajout d'un Livre \n 2 - Ajout d'un Périodique ");
 				rep2 = sc.nextInt();
-				sc.nextLine(); // pour récupérer l'appui sur la touche entrée au moment de valider le choix précédent
-				if (rep2 == 1)
+				sc.nextLine(); // pour récupérer l'appui sur la touche entrée au moment de valider le choix précédent. Si cette ligne est absente, l'appui sur la touche Entrée est enregistré lors du prochain nextLine(), correspondant au titre.
+				if (rep2 == 1) // Ajout d'un livre
 					{
 						System.out.println("Quel est le titre du livre?\n");
 						titre = sc.nextLine();
@@ -106,12 +116,12 @@ public class Gestionnaire {
 						while (flag2)
 						{
 						
-						if (rep3.toLowerCase().equals("o"))
+						if (rep3.toLowerCase().equals("o")) // On passe la réponse de l'user en minuscule, un moyen simple d'augmenter légèrement la robustesse
 							{
-								Livre new_livre = new Livre(titre,pages,auteur,editeur);
-								this.tampon.addElement(new_livre);
+								Livre new_livre = new Livre(titre,pages,auteur,editeur); // L'objet est crée...
+								this.tampon.addElement(new_livre); // ... puis ajouté au vector tampon
 								System.out.println("Le livre a bien été rentré à la liste des documents à ajouter.");
-								flag2 = false;
+								flag2 = false; // pour pouvoir sortir de cette boucle
 							}
 						else if (rep3.toLowerCase().equals("n"))
 							{
@@ -125,7 +135,7 @@ public class Gestionnaire {
 						}	
 					}
 					
-				else if (rep2 ==2)
+				else if (rep2 ==2) // Ajout d'un périodique
 					{
 						System.out.println("Quel est le titre du périodique?\n");
 						titre = sc.nextLine();
@@ -136,7 +146,7 @@ public class Gestionnaire {
 						frequence = sc.nextLine();
 						
 						System.out.println("Vous êtes sur le point d'ajouter le document suivant : \n Titre =  " + titre + " - Pages =  "
-											 + Integer.toString(pages) + " - Fréquence : " + frequence + "\n Confirmez vous la saisie? (o/n)");
+											 + Integer.toString(pages) + " - Fréquence : " + frequence + "\n Confirmez vous la saisie? (o/n)"); // demande de confirmation
 						
 						rep3 = sc.nextLine();
 						while (flag3)
@@ -162,7 +172,7 @@ public class Gestionnaire {
 						
 					}
 				
-				else
+				else 
 					{
 						System.out.println("Nous n'avons pas compris votre choix. Retour à la question initiale");
 					}
